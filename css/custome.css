@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+:root{
+    --fontMain: 'Lato', sans-serif; 
+    --primary: #202020;
+    --secondary: #2a307e;
+    --warning: rgb(114, 23, 23);
+    --white: #ffffff;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+ 
+body{
+    background-color: var(--primary);
+    font-family: var(--fontMain);
+}
+
+.header{
+    margin-block: 3rem;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    row-gap: 3rem;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 1024px;
+    width: 90%;
+}
+
+.title{
+    color: var(--white);
+    font-size: 2.6rem;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.form{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 3rem;
+    margin: 0 auto;
+    row-gap: 1.2rem;
+}
+
+.character{
+    border: 0;
+    border-radius: .5rem;
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin: 0 auto;
+    outline: none;
+    padding: 1rem 2rem;
+    width: 20rem;
+}
+
+.submit{
+    background-color: var(--secondary);
+    border: none;
+    border-radius: .5rem;
+    color: var(--white);
+    font-size: 1.2rem;
+    margin: 0 auto;
+    padding: 0;
+    text-transform: uppercase;
+    transition: opacity .3s;
+    width: 20rem;
+}
+
+.submit:hover{
+    cursor: pointer;
+    opacity: .9;
+}
+
+.main{
+    margin-bottom: 2rem;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+}
+
+.card{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.card a{
+    height: 27rem;
+    overflow: hidden;
+    width: 100%;
+}
+
+.card a:hover .character-img{
+    transform: scale(1.1);
+}
+
+.card img {
+    height: 100%;
+}
+
+.character-img{
+    transition: transform .3s;
+    width: 100%;
+}
+
+.character-name{
+    color: var(--white);
+    font-size: 1.6rem;
+    height: 2rem;
+    margin-block:  1rem 0;
+}
+
+.warning{
+    background-color: var(--warning);
+    border-radius: .5rem;
+    color: var(--white);
+    font-size: 1.5rem;
+    height: 4rem;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+    width: 20rem;
+}
+
+@media screen and (min-width: 454px){
+    .grid{
+        column-gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 768px){
+    .header{
+        margin-block: 5rem;
+    }
+
+    .title{
+        font-size: 3rem;
+    }
+
+    .form{
+        gap: 0 1.5rem;
+        grid-template-columns: 1fr 10rem;
+        grid-template-rows: 1fr;
+    }
+
+    .submit{
+        font-size: 1.4rem;
+        width: 100%;
+    }
+
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
